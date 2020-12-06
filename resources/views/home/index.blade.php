@@ -111,7 +111,7 @@
 
     <!-- rent-step-section start -->
     <section class="rent-step-section pb-120">
-        <div class="element-one"><img src="assets/images/elements/car.png" alt="image"></div>
+        <div class="element-one"><img src="{{asset('assets')}}/assets/images/elements/car.png" alt="image"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -150,7 +150,7 @@
                     <div class="choose-car-slider owl-carousel">
                         <div class="car-item">
                             <div class="thumb">
-                                <img src="assets/images/cars/1.jpg" alt="image">
+                                <img src="{{asset('assets')}}/assets/images/cars/1.jpg" alt="image">
                             </div>
                             <div class="car-item-body">
                                 <div class="content">
@@ -170,7 +170,7 @@
                         </div><!-- car-item end -->
                         <div class="car-item">
                             <div class="thumb">
-                                <img src="assets/images/cars/2.jpg" alt="image">
+                                <img src="{{asset('assets')}}/assets/images/cars/2.jpg" alt="image">
                             </div>
                             <div class="car-item-body">
                                 <div class="content">
@@ -190,7 +190,7 @@
                         </div><!-- car-item end -->
                         <div class="car-item">
                             <div class="thumb">
-                                <img src="assets/images/cars/3.jpg" alt="image">
+                                <img src="{{asset('assets')}}/assets/images/cars/3.jpg" alt="image">
                             </div>
                             <div class="car-item-body">
                                 <div class="content">
@@ -210,7 +210,7 @@
                         </div><!-- car-item end -->
                         <div class="car-item">
                             <div class="thumb">
-                                <img src="assets/images/cars/1.jpg" alt="image">
+                                <img src="{{asset('assets')}}/assets/images/cars/1.jpg" alt="image">
                             </div>
                             <div class="car-item-body">
                                 <div class="content">
@@ -230,7 +230,7 @@
                         </div><!-- car-item end -->
                         <div class="car-item">
                             <div class="thumb">
-                                <img src="assets/images/cars/2.jpg" alt="image">
+                                <img src="{{asset('assets')}}/assets/images/cars/2.jpg" alt="image">
                             </div>
                             <div class="car-item-body">
                                 <div class="content">
@@ -294,8 +294,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="overview-img">
-                        <div class="img-container"><img src="assets/images/overview/2.jpg" alt="image"></div>
-                        <div class="img-container"><img src="assets/images/overview/1.jpg" alt="image"></div>
+                        <div class="img-container"><img src="{{asset('assets')}}/assets/images/overview/2.jpg" alt="image"></div>
+                        <div class="img-container"><img src="{{asset('assets')}}/assets/images/overview/1.jpg" alt="image"></div>
                     </div>
                 </div>
             </div>
@@ -318,7 +318,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="team-item">
                         <div class="thumb">
-                            <img src="assets/images/team/1.jpg" alt="image">
+                            <img src="{{asset('assets')}}/assets/images/team/1.jpg" alt="image">
                             <div class="content">
                                 <h3 class="name">William cook</h3>
                                 <span class="designation">Support Manager</span>
@@ -335,7 +335,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="team-item">
                         <div class="thumb">
-                            <img src="assets/images/team/2.jpg" alt="image">
+                            <img src="{{asset('assets')}}/assets/images/team/2.jpg" alt="image">
                             <div class="content">
                                 <h3 class="name">William cook</h3>
                                 <span class="designation">Support Manager</span>
@@ -352,7 +352,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="team-item">
                         <div class="thumb">
-                            <img src="assets/images/team/3.jpg" alt="image">
+                            <img src="{{asset('assets')}}/assets/images/team/3.jpg" alt="image">
                             <div class="content">
                                 <h3 class="name">William cook</h3>
                                 <span class="designation">Support Manager</span>
@@ -372,14 +372,14 @@
     <!-- team-section end -->
 
     <!-- testimonial-section start -->
-    <section class="testimonial-section overlay-black pt-120 pb-120 bg_img" data-background="assets/images/testimonial-bg.jpg">
+    <section class="testimonial-section overlay-black pt-120 pb-120 bg_img" data-background="{{asset('assets')}}/assets/images/testimonial-bg.jpg">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="testimonial-slider owl-carousel">
                         <div class="testimonial-item text-center">
                             <div class="testimonial-item--header">
-                                <div class="thumb"><img src="assets/images/testimonial/1.jpg" alt="image"></div>
+                                <div class="thumb"><img src="{{asset('assets')}}/assets/images/testimonial/1.jpg" alt="image"></div>
                                 <h3 class="name">martin hook</h3>
                                 <span class="designation">business man</span>
                             </div>
@@ -396,7 +396,7 @@
                         </div><!-- testimonial-item end -->
                         <div class="testimonial-item text-center">
                             <div class="testimonial-item--header">
-                                <div class="thumb"><img src="assets/images/testimonial/1.jpg" alt="image"></div>
+                                <div class="thumb"><img src="{{asset('assets')}}/assets/images/testimonial/1.jpg" alt="image"></div>
                                 <h3 class="name">martin hook</h3>
                                 <span class="designation">business man</span>
                             </div>
@@ -413,7 +413,7 @@
                         </div><!-- testimonial-item end -->
                         <div class="testimonial-item text-center">
                             <div class="testimonial-item--header">
-                                <div class="thumb"><img src="assets/images/testimonial/1.jpg" alt="image"></div>
+                                <div class="thumb"><img src="{{asset('assets')}}/assets/images/testimonial/1.jpg" alt="image"></div>
                                 <h3 class="name">martin hook</h3>
                                 <span class="designation">business man</span>
                             </div>
@@ -449,7 +449,7 @@
             <div class="row mb-none-30">
                 <div class="col-lg-6">
                     <div class="post-item post-item--grid">
-                        <div class="thumb bg_img" data-background="assets/images/blog/1.jpg">
+                        <div class="thumb bg_img" data-background="{{asset('assets')}}/assets/images/blog/1.jpg">
                             <ul class="post-meta d-flex">
                                 <li><a href="#0">25 Jan 2019</a></li>
                                 <li><a href="#0">03 Comments</a></li>
@@ -464,7 +464,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="post-item post-item--grid">
-                        <div class="thumb bg_img" data-background="assets/images/blog/2.jpg">
+                        <div class="thumb bg_img" data-background="{{asset('assets')}}/assets/images/blog/2.jpg">
                             <ul class="post-meta d-flex">
                                 <li><a href="#0">25 Jan 2019</a></li>
                                 <li><a href="#0">03 Comments</a></li>
@@ -479,7 +479,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="post-item post-item--grid">
-                        <div class="thumb bg_img" data-background="assets/images/blog/3.jpg">
+                        <div class="thumb bg_img" data-background="{{asset('assets')}}/assets/images/blog/3.jpg">
                             <ul class="post-meta d-flex">
                                 <li><a href="#0">25 Jan 2019</a></li>
                                 <li><a href="#0">03 Comments</a></li>
@@ -494,7 +494,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="post-item post-item--grid">
-                        <div class="thumb bg_img" data-background="assets/images/blog/4.jpg">
+                        <div class="thumb bg_img" data-background="{{asset('assets')}}/assets/images/blog/4.jpg">
                             <ul class="post-meta d-flex">
                                 <li><a href="#0">25 Jan 2019</a></li>
                                 <li><a href="#0">03 Comments</a></li>
@@ -513,7 +513,7 @@
     <!-- blog-section end  -->
 
     <!-- subscribe-section start -->
-    <section class="subscribe-section overlay-main bg_img pt-120 pb-120" data-background="assets/images/bg1.jpg">
+    <section class="subscribe-section overlay-main bg_img pt-120 pb-120" data-background="{{asset('assets')}}/assets/images/bg1.jpg">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
@@ -539,28 +539,28 @@
                         <div class="col-sm-6">
                             <div class="brand-item">
                                 <div class="brand-item--inner">
-                                    <img src="assets/images/brand-logo/1.png" alt="image">
+                                    <img src="{{asset('assets')}}/assets/images/brand-logo/1.png" alt="image">
                                 </div>
                             </div>
                         </div><!-- brand-item end -->
                         <div class="col-sm-6">
                             <div class="brand-item">
                                 <div class="brand-item--inner">
-                                    <img src="assets/images/brand-logo/2.png" alt="image">
+                                    <img src="{{asset('assets')}}/assets/images/brand-logo/2.png" alt="image">
                                 </div>
                             </div>
                         </div><!-- brand-item end -->
                         <div class="col-sm-6">
                             <div class="brand-item">
                                 <div class="brand-item--inner">
-                                    <img src="assets/images/brand-logo/3.png" alt="image">
+                                    <img src="{{asset('assets')}}/assets/images/brand-logo/3.png" alt="image">
                                 </div>
                             </div>
                         </div><!-- brand-item end -->
                         <div class="col-sm-6">
                             <div class="brand-item">
                                 <div class="brand-item--inner">
-                                    <img src="assets/images/brand-logo/4.png" alt="image">
+                                    <img src="{{asset('assets')}}/assets/images/brand-logo/4.png" alt="image">
                                 </div>
                             </div>
                         </div><!-- brand-item end -->

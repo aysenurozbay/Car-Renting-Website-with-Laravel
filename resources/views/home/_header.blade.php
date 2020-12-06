@@ -25,13 +25,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="header-action d-flex align-items-center justify-content-end">
-                        <div class="lag-select-area">
-                            <select>
-                                <option>ENG</option>
-                                <option>RUS</option>
-                                <option>BAN</option>
-                            </select>
-                        </div>
+
                         <div class="login-reg">
                             <a href="#0">Sign Up</a>
                             <a href="#0">Sign in</a>

@@ -6,7 +6,7 @@
                 <div class="col-lg-4 col-sm-8">
                     <div class="footer-widget widget-about">
                         <div class="widget-about-content">
-                            <a href="index.html" class="footer-logo"><img src="assets/images/logo-footer.png" alt="logo"></a>
+                            <a href="index.html" class="footer-logo"><img src="{{asset('assets')}}/assets/images/logo-footer.png" alt="logo"></a>
                             <p>Lorem ipsum dolor sit amet, congue placeranec. Leo faucibus sed eleifend bibendum n vehicula nulla mauris nulla ipsum neque sed. Gravida egestas fermentum urna, velit sed. </p>
                             <ul class="social-links">
                                 <li><a href="#0"><i class="fa fa-facebook"></i></a></li>
@@ -72,9 +72,9 @@
                 <div class="col-sm-6">
                     <ul class="payment-method d-flex justify-content-end">
                         <li>We accept</li>
-                        <li><img src="assets/images/money-method/1.png" alt="image"></li>
-                        <li><img src="assets/images/money-method/2.png" alt="image"></li>
-                        <li><img src="assets/images/money-method/3.png" alt="image"></li>
+                        <li><img src="{{asset('assets')}}/assets/images/money-method/1.png" alt="image"></li>
+                        <li><img src="{{asset('assets')}}/assets/images/money-method/2.png" alt="image"></li>
+                        <li><img src="{{asset('assets')}}/assets/images/money-method/3.png" alt="image"></li>
                     </ul>
                 </div>
             </div>
