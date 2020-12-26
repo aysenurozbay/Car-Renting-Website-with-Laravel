@@ -29,29 +29,7 @@
     <!-- main style css link -->
     <link rel="stylesheet" href="{{asset('assets')}}/assets/css/main.css">
 
-    <!-- jquery js link -->
-    <script src="{{asset('assets')}}/assets/js/jquery-3.3.1.min.js"></script>
-    <!-- jquery migrate js link -->
-    <script src="{{asset('assets')}}/assets/js/jquery-migrate-3.0.0.js"></script>
-    <!-- bootstrap js link -->
-    <script src="{{asset('assets')}}/assets/js/bootstrap.min.js"></script>
-    <!-- lightcase js link -->
-    <script src="{{asset('assets')}}/assets/js/lightcase.js"></script>
-    <!-- wow js link -->
-    <script src="{{asset('assets')}}/assets/js/wow.min.js"></script>
-    <!-- nice select js link -->
-    <script src="{{asset('assets')}}/assets/js/jquery.nice-select.min.js"></script>
-    <!-- datepicker js link -->
-    <script src="{{asset('assets')}}/assets/js/datepicker.min.js"></script>
-    <script src="{{asset('assets')}}/assets/js/datepicker.en.js"></script>
-    <!-- wickedpicker js link -->
-    <script src="{{asset('assets')}}/assets/js/wickedpicker.min.js"></script>
-    <!-- owl carousel js link -->
-    <script src="{{asset('assets')}}/assets/js/owl.carousel.min.js"></script>
-    <!-- jquery ui js link -->
-    <script src="{{asset('assets')}}/assets/js/jquery-ui.min.js"></script>
-    <!-- main js link -->
-    <script src="{{asset('assets')}}/assets/js/main.js"></script>
+
 
 
     @yield('headercss')
@@ -63,23 +41,27 @@
 <body>
 
 <!--header -->
-@include('home._header')
 
+<div class="header-bottom">
+    <div class="container">
+        @include('home._header')
 
-
-
+    </div>
     @include('home._slider')
+</div>
+
+<!-- header-bottom end -->
+
+{{--İNDEX --}}
 
 
+@include('home.index')
 
-<!-- burda menü kısmını yaptık -->
-
-
-@section('content')
-
-@show
 <!--footer -->
 @include('home._footer')
+
+
+
 @yield('footerjs')
 
 
@@ -87,4 +69,32 @@
 
 </body>
 
+
+<!-- jquery js link -->
+<script src="{{asset('assets')}}/assets/js/jquery-3.3.1.min.js"></script>
+<!-- jquery migrate js link -->
+<script src="{{asset('assets')}}/assets/js/jquery-migrate-3.0.0.js"></script>
+<!-- bootstrap js link -->
+<script src="{{asset('assets')}}/assets/js/bootstrap.min.js"></script>
+<!-- lightcase js link -->
+<script src="{{asset('assets')}}/assets/js/lightcase.js"></script>
+<!-- wow js link -->
+<script src="{{asset('assets')}}/assets/js/wow.min.js"></script>
+<!-- nice select js link -->
+<script src="{{asset('assets')}}/assets/js/jquery.nice-select.min.js"></script>
+<!-- datepicker js link -->
+<script src="{{asset('assets')}}/assets/js/datepicker.min.js"></script>
+<script src="{{asset('assets')}}/assets/js/datepicker.en.js"></script>
+<!-- wickedpicker js link -->
+<script src="{{asset('assets')}}/assets/js/wickedpicker.min.js"></script>
+<!-- owl carousel js link -->
+<script src="{{asset('assets')}}/assets/js/owl.carousel.min.js"></script>
+<!-- jquery ui js link -->
+<script src="{{asset('assets')}}/assets/js/jquery-ui.min.js"></script>
+<!-- main js link -->
+<script src="{{asset('assets')}}/assets/js/main.js"></script>
+
 </html>
+
+
+

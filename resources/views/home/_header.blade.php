@@ -44,12 +44,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav main-menu mr-auto">
-                        <li class="menu_has_children"><a href="#0">Home</a>
-                            <ul class="sub-menu">
-                                <li><a href="index.html">Home One</a></li>
-                                <li><a href="home-two.html">Home Two</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="index.html">Home </a></li>
+
+
                         <li><a href="about.html">About</a>
                         <li class="menu_has_children"><a href="#0">cars</a>
                             <ul class="sub-menu">
