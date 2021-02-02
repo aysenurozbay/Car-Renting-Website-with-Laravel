@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use function GuzzleHttp\Promise\all;
 
-class CategoryController extends Controller
+class   CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.

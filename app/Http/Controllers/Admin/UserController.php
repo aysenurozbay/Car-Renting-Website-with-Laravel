@@ -49,9 +49,11 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(User $user,$id)
     {
-        //
+        $data=User::find($id);
+        $datalist= Role::all()->sortBy('name');
+        return view('admin.user_show',['data' =>$data, 'datalist'=>$datalist]);
     }
 
     /**
@@ -101,17 +103,17 @@ class UserController extends Controller
         $datalist= Role::all()->sortBy('name');
         return view('admin.user_roles',['data' => $data, 'datalist' =>$datalist]);
     }
-    public function user_role_store(User $user,$id,Request $request)
+    public function user_role_store(Request $request,User $user,$id)
     {
-        $data=User::find($id);
+        $user=User::find($id);
         $roleid=$request->input('roleid');
-        $user->roles()->attach($roleid);
+        $user->roles()->attach($roleid);//many to many ilişkilerinde veri ekleme
         return redirect()->back()->with('success','Role changed');
     }
-    public function user_role_delete(User $user,$userid,Request $request,$roleid)
+    public function user_role_delete(Request $request,User $user,$userid,$roleid)
     {
         $user=User::find($userid);
-        $user->roles()->detach($roleid);
+        $user->roles()->detach($roleid); //many to many ilişkilerinde veri silme
         return redirect()->back()->with('success','Role changed');
     }
 

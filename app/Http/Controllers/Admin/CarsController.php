@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Cars;
 use App\Models\Category;
+use App\Models\Reservation;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -76,9 +78,20 @@ class CarsController extends Controller
      * @param  \App\Models\Cars  $cars
      * @return \Illuminate\Http\Response
      */
-    public function show(Cars $cars)
+    public function show(Cars $cars,$id)
     {
-        //
+        $res=Cars::find($id);
+
+        $datalist= Reservation::where([
+            ['car_id','=', $id],
+            ])->get();
+        $user= User::where([
+            ['id','=', $datalist->user_id],
+            ])->get();
+
+
+        return view('admin.reservation_detail', ['datalist' => $datalist]);
+
     }
 
     /**
@@ -117,7 +130,6 @@ class CarsController extends Controller
         $data->brand = $request->input('brand');
         $data->detail = $request->input('detail');
         $data->price = $request->input('price');
-
         $data->model = $request->input('model');
         $data->year = $request->input('year');
         $data->type = $request->input('type');
@@ -132,6 +144,7 @@ class CarsController extends Controller
 
         return redirect()->route('admin_cars');
     }
+
 
 
     /**

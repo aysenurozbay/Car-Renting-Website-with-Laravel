@@ -12,12 +12,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="page-title">Contact</h2>
+                    <h2 class="page-title">Cars</h2>
                     <ol class="page-list">
                         <li><a href="{{route('home')}}"><i class="fa fa-home"></i> Home</a></li>
-                        <li>Car List</li>
-
-                        <li>{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($data, $data->title) }}</li>
+                        <li>{{$data->title}}</li>
                     </ol>
                 </div>
             </div>
@@ -73,7 +71,7 @@
                                         <h4 class="title">{{$dl->title}}</h4>
                                         <span class="price">start form {{$dl->price}} per day</span>
                                         <p>{{$dl->description}}</p>
-                                        <a href="{{route('car',['id'=> $dl->id, 'slug' => $dl->slug ])}}" class="cmn-btn">rent car</a>
+                                        <a href="{{route('car',['id'=> $dl->id, 'slug' => $dl->slug ])}}" class="cmn-btn">See More</a>
                                     </div>
                                     <div class="car-item-meta">
                                         <ul class="details-list">

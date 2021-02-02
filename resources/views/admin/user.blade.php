@@ -85,7 +85,8 @@
                                                     @foreach($dl->roles as $row)
                                                         {{$row->name}} ,
                                                     @endforeach
-                                                    <a href="{{route('admin_user_roles',['id' => $dl->id])}}" onclick="return !window.open(this.href, '','top=50 left=100 width=800, height=600')">
+                                                    <a href="{{route('admin_user_roles',['id' => $dl->id])}}"  target="_blank">
+{{--                                                        onclick="return !window.open(this.href, '','top=50 left=100 width=800, height=600')" --> yeni sayfada açmak için--}}
                                                         <i class="fas fa-plus-square"></i>
                                                     </a>
                                                 </td>

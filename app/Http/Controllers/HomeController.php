@@ -17,7 +17,7 @@ class HomeController extends Controller
 {
 
     public static function categoryList(){
-        return Category::where('parent_id', '=', 0)->with('children')->get();
+        return Category::where('parent_id', '=', 0,)->with('children')->get();
     }
 
     public static function countreview($id){
@@ -61,7 +61,10 @@ class HomeController extends Controller
     }
 
     public function categorycars($id,$slug){
-        $datalist= Cars::where('category_id',$id)->get();
+        $datalist= Cars::where([
+                                ['status', 'True'],
+                                ['category_id',$id],
+                                ])->get();
         $data= Category::find($id);
         return view('home.category_cars', ['datalist'=>$datalist,'data'=>$data]);
     }
@@ -110,7 +113,7 @@ class HomeController extends Controller
             if( Auth::attempt($credentials)){
                 $request-> session()->regenerate();
 
-                return redirect()->intended('admin');
+                return redirect()->intended('home');
             }
 
             return back()->withErrors([

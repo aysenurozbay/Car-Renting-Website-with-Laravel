@@ -15,8 +15,8 @@
         </div>
 
         <div class="d-sm-flex align-items-center justify-content-between mb-5">
-            <h4> <a href="{{route('admin_faq_add')}}"></a>
-            </h4>
+            <h4> <a href="{{route('admin_faq_add')}}"></a> </h4>
+
 
             <a href="{{route('admin_faq_add')}}" class="btn btn-secondary btn-icon-split">
                     <span class="icon text-white-50">

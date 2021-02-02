@@ -1,7 +1,6 @@
 <div id="content-wrapper" class="d-flex flex-column">
     <div id="content">
 
-
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -206,7 +205,7 @@
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                 <tr>
-                                    <th>Order ID</th>
+                                    <th>Car ID</th>
                                     <th>Customer</th>
                                     <th>Item</th>
                                     <th>Status</th>
@@ -215,40 +214,21 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td><a href="#">RA0449</a></td>
-                                    <td>Udin Wayang</td>
-                                    <td>Nasi Padang</td>
-                                    <td><span class="badge badge-success">Delivered</span></td>
-                                    <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                                    @foreach ($datalist as $dl)
+
+
+                                    <td>{{ $dl->id}}</td>
+                                    <td>{{ $dl->title}}</td>
+                                    <td>{{ $dl->numberplate}}</td>
+                                    <td><span class="badge badge-danger">RESERVED</span></td>
+                                        <a href="{{route('admin_user_roles',['id' => $dl->id])}}"  target="_blank"  onclick="return !window.open(this.href, '','top=50 left=100 width=800, height=600')"> </a>
+
+                                    <td>
+                                        <a href="{{route('admin_cars_show',['id'=> $dl->id])}}" class="btn btn-sm btn-primary">Detail</a>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td><a href="#">RA5324</a></td>
-                                    <td>Jaenab Bajigur</td>
-                                    <td>Gundam 90' Edition</td>
-                                    <td><span class="badge badge-warning">Shipping</span></td>
-                                    <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#">RA8568</a></td>
-                                    <td>Rivat Mahesa</td>
-                                    <td>Oblong T-Shirt</td>
-                                    <td><span class="badge badge-danger">Pending</span></td>
-                                    <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#">RA1453</a></td>
-                                    <td>Indri Junanda</td>
-                                    <td>Hat Rounded</td>
-                                    <td><span class="badge badge-info">Processing</span></td>
-                                    <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#">RA1998</a></td>
-                                    <td>Udin Cilok</td>
-                                    <td>Baby Powder</td>
-                                    <td><span class="badge badge-success">Delivered</span></td>
-                                    <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                                </tr>
+
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -333,3 +313,4 @@
         </div>
         <!---Container Fluid-->
     </div>
+</div>

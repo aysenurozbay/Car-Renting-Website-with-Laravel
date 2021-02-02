@@ -19,7 +19,7 @@
                     <ul class="header-info d-flex justify-content-center">
                         <li>
                             <i class="fa fa-map-marker"></i>
-                            <p>Medino, NY 10012, USA Mitro Road</p>
+                            <p>{{$setting->address }}</p>
                         </li>
                         <li>
                             <i class="fa fa-clock-o"></i>

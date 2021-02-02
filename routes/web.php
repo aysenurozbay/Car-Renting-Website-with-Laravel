@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\ReservationController;
+use App\Http\Controllers\ShopcartController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -36,7 +38,7 @@ Route::post('/getcar', [HomeController::class, 'getcar'])->name('getcar');
 
 //ADMIN
 Route::get('/admin', [\App\Http\Controllers\Admin\HomeController::class,'index'])->name('adminhome')->middleware('auth');
-Route::get('/login', [\App\Http\Controllers\HomeController::class,'login'])->name('adminlogin');
+Route::get('/login', [\App\Http\Controllers\HomeController::class,'login'])->name('login');
 //to check the login request, create a new url
 Route::post('/admin/logincheck', [\App\Http\Controllers\HomeController::class,'admin_logincheck'])->name('admin_logincheck');
 Route::get('/logout', [\App\Http\Controllers\HomeController::class, 'logout'])-> name('admin_logout');
@@ -68,7 +70,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
             Route::get('edit/{id}' , [App\Http\Controllers\Admin\CarsController::class, 'edit'])->name('admin_cars_edit');
             Route::post('update/{id}' , [App\Http\Controllers\Admin\CarsController::class, 'update'])->name('admin_cars_update');
             Route::get('delete/{id}' , [App\Http\Controllers\Admin\CarsController::class, 'destroy'])->name('admin_cars_delete');
-            Route::get('show' , [App\Http\Controllers\Admin\CarsController::class, 'show'])->name('admin_cars_show');
+            Route::get('show/{id}' , [App\Http\Controllers\Admin\CarsController::class, 'show'])->name('admin_cars_show');
 
 
         });
@@ -79,7 +81,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
                Route::get('edit/{id}' , [MessageController::class, 'edit'])->name('admin_message_edit');
             Route::post('update/{id}' , [MessageController::class, 'update'])->name('admin_message_update');
             Route::get('delete/{id}' , [MessageController::class, 'destroy'])->name('admin_message_delete');
-            Route::get('show' , [MessageController::class, 'show'])->name('admin_message_show');
+            Route::get('show', [MessageController::class, 'show'])->name('admin_message_show');
 
 
         });
@@ -92,20 +94,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
             Route::get('delete/{id}/{car_id}', [\App\Http\Controllers\Admin\ImageController::class, 'destroy'])->name('admin_image_delete');
             Route::get('show', [\App\Http\Controllers\Admin\ImageController::class, 'show'])->name('admin_image_show');
         });
-        Route::prefix('user')->group(function (){
-            Route::get('/' , [App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin_users');
-            Route::post('create' , [App\Http\Controllers\Admin\UserController::class, 'create'])->name('admin_users_add');
-            Route::post('store' , [App\Http\Controllers\Admin\UserController::class, 'store'])->name('admin_users_store');
-            Route::get('edit/{id}' , [App\Http\Controllers\Admin\UserController::class, 'edit'])->name('admin_users_edit');
-            Route::post('update/{id}' , [App\Http\Controllers\Admin\UserController::class, 'update'])->name('admin_users_update');
-            Route::get('delete/{id}' , [App\Http\Controllers\Admin\UserController::class, 'destroy'])->name('admin_users_delete');
-            Route::get('show/{id}' , [App\Http\Controllers\Admin\UserController::class, 'show'])->name('admin_user_show');
-            Route::get('userrole/{id}' , [App\Http\Controllers\Admin\UserController::class, 'user_roles'])->name('admin_user_roles');
-            Route::post('userrolestore/{id}' , [App\Http\Controllers\Admin\UserController::class, 'user_role_store'])->name('admin_user_role_add');
-            Route::get('userroledelete/{id}/{roleid}' , [App\Http\Controllers\Admin\UserController::class, 'user_role_delete'])->name('admin_user_role_delete');
 
-
-        });
         //    Formu çağırıyorsak Route::get kullanılır veri almak içinse POST
 
         Route::get('settings' , [App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin_setting');
@@ -113,25 +102,55 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     });
 });
 
-        Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
-            Route::get('/', [UserController::class, 'index'])->name('myprofile');
+Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
+    Route::get('/', [UserController::class, 'index'])->name('myprofile');
 
-        });
-        Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
-            Route::get('/profile', [UserController::class, 'index'])->name('myprofile');
+});
+Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
+    Route::get('/profile', [UserController::class, 'index'])->name('myprofile');
 
-        });
-        Route::prefix('faq')->group(function (){
-            Route::get('/' , [FaqController::class, 'index'])->name('admin_faq');
-            Route::get('create' , [FaqController::class, 'create'])->name('admin_faq_add');
-            Route::post('store' , [FaqController::class, 'store'])->name('admin_faq_store');
-            Route::get('edit/{id}' , [FaqController::class, 'edit'])->name('admin_faq_edit');
-            Route::post('update/{id}' , [FaqController::class, 'update'])->name('admin_faq_update');
-            Route::get('delete/{id}' , [FaqController::class, 'destroy'])->name('admin_faq_delete');
-            Route::get('show' , [FaqController::class, 'show'])->name('admin_faq_show');
+});
+Route::prefix('faq')->group(function (){
+    Route::get('/' , [FaqController::class, 'index'])->name('admin_faq');
+    Route::get('create' , [FaqController::class, 'create'])->name('admin_faq_add');
+    Route::post('store' , [FaqController::class, 'store'])->name('admin_faq_store');
+    Route::get('edit/{id}' , [FaqController::class, 'edit'])->name('admin_faq_edit');
+    Route::post('update/{id}' , [FaqController::class, 'update'])->name('admin_faq_update');
+    Route::get('delete/{id}' , [FaqController::class, 'destroy'])->name('admin_faq_delete');
+    Route::get('show' , [FaqController::class, 'show'])->name('admin_faq_show');
 
 
-        });
+});
+Route::prefix('user')->group(function (){
+    Route::get('/' , [App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin_users');
+    Route::post('create' , [App\Http\Controllers\Admin\UserController::class, 'create'])->name('admin_users_add');
+    Route::post('store' , [App\Http\Controllers\Admin\UserController::class, 'store'])->name('admin_users_store');
+    Route::get('edit/{id}' , [App\Http\Controllers\Admin\UserController::class, 'edit'])->name('admin_users_edit');
+    Route::post('update/{id}' , [App\Http\Controllers\Admin\UserController::class, 'update'])->name('admin_users_update');
+    Route::get('delete/{id}' , [App\Http\Controllers\Admin\UserController::class, 'destroy'])->name('admin_users_delete');
+    Route::get('show/{id}' , [App\Http\Controllers\Admin\UserController::class, 'show'])->name('admin_user_show');
+    Route::get('userrole/{id}' , [App\Http\Controllers\Admin\UserController::class, 'user_roles'])->name('admin_user_roles');
+    Route::post('userrolestore/{id}' , [App\Http\Controllers\Admin\UserController::class, 'user_role_store'])->name('admin_user_role_add');
+    Route::get('userroledelete/{userid}/{roleid}' , [App\Http\Controllers\Admin\UserController::class, 'user_role_delete'])->name('admin_user_role_delete');
+
+//    Route::prefix('shopcart')->group(function (){
+//        Route::get('/' , [ShopcartController::class, 'index'])->name('user_shopcart');
+//        Route::post('add/{id}' , [ShopcartController::class, 'store'])->name('user_shopcart_add');
+//        Route::post('update/{id}' , [ShopcartController::class, 'update'])->name('user_shopcart_update');
+//        Route::get('delete/{id}' , [ShopcartController::class, 'destroy'])->name('user_shopcart_delete');
+//    });
+    Route::prefix('reservation')->group(function (){
+        Route::get('/' , [ReservationController::class, 'index'])->name('user_reservation');
+        Route::post('create/{id}' , [ReservationController::class, 'create'])->name('user_reservation_add');
+        Route::post('add/{car_id}' , [ReservationController::class, 'store'])->name('user_reservation_create');
+        Route::post('update/{id}' , [ReservationController::class, 'update'])->name('user_reservation_update');
+        Route::get('delete/{id}/{car_id}' , [ReservationController::class, 'destroy'])->name('user_reservation_delete');
+        Route::get('show' , [ReservationController::class, 'show'])->name('user_reservation_show');
+    });
+
+
+});
+
 
 
 

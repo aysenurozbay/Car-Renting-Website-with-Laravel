@@ -96,7 +96,14 @@
 
                                                     @endif
                                                 </td>
-                                                <td>{{ $dl->status }}</td>
+                                                <td>
+                                                    @if($dl ->status == 'True')
+                                                    <h3 class="badge badge-success">{{ $dl->status }}</h3>
+
+                                                    @elseif($dl ->status == 'False')
+                                                         <span class="badge badge-danger">{{ $dl->status }}</span>
+                                                    @endif
+                                                </td>
 
                                                 <td><a href="{{route('admin_image_add', ['car_id'=> $dl->id])}}"> <i class="fas fa-images"></i> </a></td>
                                                 <td><a href="{{route('admin_cars_edit', ['id' => $dl->id])}}"> <i class="fas fa-edit"> </i></a></td>

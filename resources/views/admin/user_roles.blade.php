@@ -13,88 +13,106 @@
                 <li class="breadcrumb-item active" aria-current="page">User Roles</li>
             </ol>
         </div>
-        @include('home.message')
 
-        <div class="text-center">
 
-            <div class="form-group" align="left">
-                <label >Name : </label>
-                <label style="color: red" >{{$data->name}}</label>
-            </div>
-
-            <div class="form-group"align="left" >
-                <label >Email : </label>
-                <label style="color: red" >{{$data->email}}</label>
-
-            </div>
-
-            <div class="form-group"align="left">
-                <label >Phone : </label>
-                <label style="color: red">{{$data->phone}}</label>
-
-            </div>
-
-            <td>
-                <table>
-                    @foreach($data->roles as $row)
-                        <tr>
-                            <td>{{$row->name}}</td>
-                            <td>
-                                <a href="{{route('admin_user_role_delete', ['userid' =>$data->id, 'roleid' =>$row->id])}}"> </a>
-                            </td>
-
-                        </tr>
-                    @endforeach
-                </table>
-            </td>
-
-            <th>Add Role</th>
-            <td>
-                <form role="form" action="{{route('admin_user_role_add', ['id' => $data->id])}}" method="post" enctype="multipart/form-data">
-                    @csrf
-                    <select name="roleid">
-                        @foreach($datalist as $dl)
-                            <option value="{{$dl->id}}">
-                                {{$dl->name}}
-                            </option>
-                        @endforeach
-                    </select>
-                    <div class="form-group row">
-                        <div class="col-sm-3">
-                            <button type="submit" class="btn btn-primary">Update Role</button>
-                        </div>
+        <div class="row">
+            <div class="col-lg-12 mb-4">
+            @include('home.message')
+                <!-- Simple Tables -->
+                <title> </title>
+                <div class="card">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">{{$data->name}}</h6>
                     </div>
-                </form>
-            </td>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Roles</th>
+                                <th>Add Role</th>
+                                <th>Update</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <tr>
+                                <td>
+                                    <div class="form-group" align="left">
+                                        {{$data->id}}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group" align="left">
+                                        {{$data->name}}
+                                    </div>
+                                </td>
+                                <td>
+                                    @if($data->profile_photo_path)
+                                        <img src="{{Storage::url($data->profile_photo_path)}}" height="50" style="border-radius:5px">
+                                    @endif
+                                </td>
+                                <td>
+                                    <div class="form-group" align="left">
+                                        {{$data->email}}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group" align="left">
+                                        <table>
+                                            @foreach($data->roles as $row)
+                                                <tr>
+                                                    <td class="badge badge-danger" style="text-transform: uppercase;">{{$row->name}}</td>
+                                                    <td>
+                                                        <a href="{{route('admin_user_role_delete', ['userid' =>$data->id, 'roleid' =>$row->id])}}">
+                                                            <i class="fas fa-user-times"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+                                            @endforeach
+                                        </table>
+                                    </div>
+                                </td>
+                                </td><td>
+                                    <div class="form-group" align="left">
+                                        <form role="form" action="{{route('admin_user_role_add', ['id' => $data->id])}}" method="post" enctype="multipart/form-data">
+                                            @csrf
+                                            <select name="roleid">
+                                                @foreach($datalist as $dl)
+                                                    <option value="{{$dl->id}}">
+                                                        {{$dl->name}}
+                                                    </option>
+                                                @endforeach
+                                            </select>
+
+                                    </div>
+                                </td>
+                                <td>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <button type="submit" class="btn btn-primary">Update Role</button>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </td>
+
+                            </tr>
 
 
+                            </tbody>
 
-        </div>
+                        </table>
 
-        <!-- Modal Logout -->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
-             aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
-                    <div class="modal-body">
-                        <p>Are you sure you want to logout?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                        <a href="login.html" class="btn btn-primary">Logout</a>
-                    </div>
+                    <div class="card-footer"></div>
                 </div>
             </div>
         </div>
-
-    </div>
-    <!---Container Fluid-->
+        <!--Row-->
 
 
 @endsection

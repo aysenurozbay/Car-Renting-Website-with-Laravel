@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-lg-9">
 
-                @include('profile.show')
+{{--                    @include('profile.show')--}}
 
                 </div>
                 <div class="col-lg-3">
@@ -44,11 +44,11 @@
                                     <li><a  target="_blank" href="{{route('admin_home')}}">Admin Panel</a></li>
                                 @endif
 
-                                <li><a href="#0">...</a></li>
+                                <li><a href="{{route('user_reservation_show')}}">My Reservations</a></li>
                                 <li><a href="#0">...</a></li>
                                 <li><a href="#0">...</a></li>
                                 <li><a href="{{route('logout')}}">LogOut</a></li>
-                            <ul>
+                            </ul>
 
                         </div><!-- widget end -->
 
@@ -59,6 +59,10 @@
         @endauth
     </section>
     <!-- blog-section end -->
+
+    <div id="">
+        slkfladfjkadh
+    </div>
 
 
 

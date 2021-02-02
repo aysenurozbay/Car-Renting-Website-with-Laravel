@@ -20,7 +20,7 @@ class CheckAdmin
         $userRoles= Auth::user()->roles->pluck('name');
 //        dd($userRoles);
         if (!$userRoles->contains('admin')){
-            return redirect(route('adminlogin'))->with('error','You can not reach that page');
+            return redirect(route('login'))->with('error','You can not reach that page');
         }
         return $next($request);
     }

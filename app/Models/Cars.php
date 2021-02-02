@@ -16,5 +16,15 @@ class Cars extends Model
     public function reviews(){
         return $this->hasMany(Rewiew::class);
     }
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+    public function rezervation(){
+        return $this->belongsTo(Reservation::class);
+    }
+    public function shopcart(){
+        return $this->hasMany(Shopcart::class);
+    }
+
 
 }
