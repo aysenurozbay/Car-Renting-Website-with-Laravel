@@ -80,17 +80,17 @@ class CarsController extends Controller
      */
     public function show(Cars $cars,$id)
     {
-        $res=Cars::find($id);
 
-        $datalist= Reservation::where([
-            ['car_id','=', $id],
-            ])->get();
-        $user= User::where([
-            ['id','=', $datalist->user_id],
-            ])->get();
-
-
-        return view('admin.reservation_detail', ['datalist' => $datalist]);
+//
+//        return view('home.user_orders',['datalist' => $datalist]);
+//        $res=Cars::find($id);
+//
+//        $datalist= Reservation::where([
+//            ['car_id', $id],
+//            ])->get();
+//
+//
+//        return view('admin.reservation_detail', ['datalist' => $datalist]);
 
     }
 

@@ -81,15 +81,41 @@
                             @csrf
                             <div class="content-block">
                                 <h4> Reservation Form</h4><br>
+
+                                <div class="row">
+                                    <div class="col-lg-12 form-group">
+                                        <label for="cars">Pickup Location</label>
+                                        <select required>
+                                            <option value="1" >Head Office</option>
+                                            <option value="2">Ginza Office</option>
+                                            <option value="3">Car type Two</option>
+                                            <option value="4">Car type Three</option>
+                                            <option value="5">Car type Four</option>
+                                            <option value="6">Car type Five</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row" >
+                                    <div class="col-lg-12 form-group">
+                                        <label for="cars">Pickup Location</label>
+                                        <select required>
+                                            <option value="2">Head Office</option>
+                                            <option value="3">Ginza Office</option>
+                                            <option value="4">Car type Three</option>
+                                            <option value="5">Car type Four</option>
+                                            <option value="6">Car type Five</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
 
-                                        <input type="date" name="rez_date">
+                                        <input type="date" name="rez_date" required>
 {{--                                        <input type="date" data-language='en' placeholder="Pickup Date" name="rez_date" >--}}
                                     </div>
                                     <div class="form-group col-md-6">
 {{--                                        <i class="fa fa-clock-o"></i>--}}
-                                        <input type="time"  placeholder="Pickup Time" name="rez_time">
+                                        <input type="time"  placeholder="Pickup Time" name="rez_time" required>
                                     </div>
                                     <div class="form-group col-md-6">
 {{--                                        <i class="fa fa-calendar"></i>--}}
@@ -97,7 +123,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
 {{--                                        <i class="fa fa-clock-o"></i>--}}
-                                        <input type="time"placeholder="Drop Off Time" name="return_time">
+                                        <input type="time"placeholder="Drop Off Time" name="return_time" required>
                                     </div>
                                 </div>
                             </div>

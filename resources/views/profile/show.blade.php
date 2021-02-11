@@ -18,6 +18,7 @@
                     @livewire('profile.update-password-form')
                 </div>
 
+
                 <x-jet-section-border />
             @endif
 

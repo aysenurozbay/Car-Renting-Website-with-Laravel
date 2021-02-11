@@ -145,7 +145,7 @@ Route::prefix('user')->group(function (){
         Route::post('add/{car_id}' , [ReservationController::class, 'store'])->name('user_reservation_create');
         Route::post('update/{id}' , [ReservationController::class, 'update'])->name('user_reservation_update');
         Route::get('delete/{id}/{car_id}' , [ReservationController::class, 'destroy'])->name('user_reservation_delete');
-        Route::get('show' , [ReservationController::class, 'show'])->name('user_reservation_show');
+        Route::get('show/{id]' , [ReservationController::class, 'show'])->name('user_reservation_show');
     });
 
 

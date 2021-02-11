@@ -29,44 +29,18 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="header-action d-flex align-items-center justify-content-end">
-                        <div class="lag-select-area">
 
+                        <div class="login-reg">
+                            @auth
+                                <a href="{{ route('myprofile') }}">{{ Auth::user()->name }}</a>
+                                <a href="{{ route('logout') }}">Log Out</a>
+                            @endauth
+                            @guest
+                                <a href="/register">Sign Up</a>
+                                <a href="/login">Sign in</a>
+                            @endguest
 
                         </div>
-
-                        @auth
-                            <div class="col-lg-10">
-
-                                <ul class="header-info d-flex justify-content-end" >
-
-                                    <li>
-                                        <i class="fa fa-user-circle-o"></i>
-                                        <p> <a href="{{route('myprofile')}}"> {{Auth::user()->name}} </a> </p>
-
-                                        <a href="{{route('logout')}}">Çıkış Yap</a>
-
-
-
-                                    </li>
-{{--                                    <li>--}}
-
-{{--                                        <a href="{{route('logout')}}">Çıkış Yap</a>--}}
-{{--                                    </li>--}}
-
-
-
-                                </ul>
-
-                            </div>
-                        @endauth
-                        @guest
-
-                            <div class="login-reg" style="width: max-content">
-{{--                                <a href="{{route('adminlogin')}}">Sign Up</a>--}}
-                                <a href="/login">Sign Up</a>
-                                <a href="/register">Sign in</a>
-                            </div>
-                        @endguest
                     </div>
                 </div>
             </div>

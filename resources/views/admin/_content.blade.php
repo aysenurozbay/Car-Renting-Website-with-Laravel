@@ -219,6 +219,7 @@
 
                                     <td>{{ $dl->id}}</td>
                                     <td>{{ $dl->title}}</td>
+{{--                                    <td>{{ $dl->cars->title}}</td>--}}
                                     <td>{{ $dl->numberplate}}</td>
                                     <td><span class="badge badge-danger">RESERVED</span></td>
                                         <a href="{{route('admin_user_roles',['id' => $dl->id])}}"  target="_blank"  onclick="return !window.open(this.href, '','top=50 left=100 width=800, height=600')"> </a>

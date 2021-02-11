@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-lg-9">
 
-{{--                    @include('profile.show')--}}
+                    @include('profile.show')
 
                 </div>
                 <div class="col-lg-3">
@@ -61,7 +61,7 @@
     <!-- blog-section end -->
 
     <div id="">
-        slkfladfjkadh
+
     </div>
 
 
