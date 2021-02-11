@@ -25,7 +25,7 @@
     });
   }
 
-  
+
   //Function to the css rule
   function checkSize(){
     if (window.matchMedia('(max-width: 1199px)').matches) {
@@ -52,7 +52,7 @@
     // menu options custom affix
   var fixed_top = $(".header-section");
   $(window).on("scroll", function(){
-      if( $(window).scrollTop() > 50){  
+      if( $(window).scrollTop() > 50){
           fixed_top.addClass("animated fadeInDown menu-fixed");
       }
       else{
@@ -60,7 +60,7 @@
       }
   });
 
-  //js code for mobile menu 
+  //js code for mobile menu
   $(".menu-toggle").on("click", function() {
       $(this).toggleClass("is-active");
   });
@@ -74,7 +74,7 @@
   var options = {
     now: "12:35",
     twentyFour: false,
-    title: 'Choose Your Time', 
+    title: 'Choose Your Time',
   };
   $('.timepicker').wickedpicker(options);
 

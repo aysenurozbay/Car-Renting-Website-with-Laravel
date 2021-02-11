@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Review extends Model
 {
     protected $fillable = [
-        'product_id',
         'user_id',
         'IP',
         'subject',
@@ -16,9 +15,7 @@ class Review extends Model
         'rate',
     ];
 
-    public function car(){
-        return $this->belongsTo(Cars::class);
-    }
+
     public function user(){
         return $this->belongsTo(User::class);
     }

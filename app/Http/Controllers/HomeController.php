@@ -56,7 +56,7 @@ class HomeController extends Controller
     public function car($id,$slug){
         $data= Cars::find($id);
         $datalist= Image::where('car_id', $id) ->get();
-        $reviews= Image::where('car_id', $id) ->get();
+        $reviews= select('id','user_id','subject','review')-> where('status','True')->limit(4)->orderByDesc('id')->get();
         return view('home.car_detail',['datalist'=>$datalist,'data'=>$data, 'reviews'=>$reviews]);
     }
 

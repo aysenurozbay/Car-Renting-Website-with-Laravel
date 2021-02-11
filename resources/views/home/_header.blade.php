@@ -4,6 +4,9 @@
 
 <!--  header-section start  -->
 <header class="header-section">
+    @section('footerjs')
+        @livewireScripts
+    @endsection
     <div class="header-top">
         <div class="container">
             <div class="row align-items-center">
@@ -49,9 +52,7 @@
 
     @include('home._menu')
 
-    @section('footerjs')
-{{--        @livewireScripts--}}
-    @endsection
+
 
 </header>
 <!--  header-section end  -->

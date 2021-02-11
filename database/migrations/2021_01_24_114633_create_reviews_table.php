@@ -16,7 +16,6 @@ class CreateReviewsTable extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->integer('user_id');
-            $table->integer('car_id');
             $table->integer('rate')->default('0');
             $table->string('subject',100)->nullable();
             $table->string('review')->nullable();

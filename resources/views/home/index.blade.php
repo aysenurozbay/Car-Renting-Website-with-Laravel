@@ -327,11 +327,9 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="subscribe-content-area text-center">
-                    <h2 class="title text-white">Subscribe Our News Latters for Get Update </h2>
-{{--                    <form class="subscribe-form">--}}
-{{--                        <input type="email" name="subs_email" id="subs_email" placeholder="Enter your email address">--}}
-{{--                        <button type="submit" class="form-icon"><i class="fa fa-paper-plane"></i></button>--}}
-{{--                    </form>--}}
+                    <h2 class="title text-white">Write Your Review </h2>
+                        @livewire('review')
+
                 </div>
             </div>
         </div>
