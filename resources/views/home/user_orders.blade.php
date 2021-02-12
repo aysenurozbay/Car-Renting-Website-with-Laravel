@@ -23,8 +23,11 @@
 
     <!-- blog-section start -->
     <section class="blog-section pt-120 pb-120">
+
         <div class="container">
+            @include('home.message')
             <div class="row">
+
                 <div class="col-lg-9">
 
                     @foreach($datalist as $dl)
@@ -73,8 +76,7 @@
                                     @endif
 
                                     <li><a href="{{route('user_reservation')}}">My Reservations</a></li>
-                                    <li><a href="#0">...</a></li>
-                                    <li><a href="#0">...</a></li>
+                                    <li><a href="{{route('myreviews')}}">Reviews</a></li>
                                     <li><a href="{{route('logout')}}">LogOut</a></li>
                                 </ul>
 

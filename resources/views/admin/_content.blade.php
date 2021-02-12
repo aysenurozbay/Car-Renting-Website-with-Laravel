@@ -92,7 +92,48 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-xl-8 col-lg-7 mb-4">
+                    <div class="card">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Invoice</h6>
+                            <a class="m-0 float-right btn btn-danger btn-sm" href="#">View More <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table align-items-center table-flush">
+                                <thead class="thead-light">
+                                <tr>
+                                    <th>Car ID</th>
+                                    <th>Customer</th>
+                                    <th>Item</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    @foreach ($datalist as $dl)
 
+
+                                        <td>{{ $dl->id}}</td>
+                                        <td>{{ $dl->title}}</td>
+                                        {{--                                    <td>{{ $dl->cars->title}}</td>--}}
+                                        <td>{{ $dl->rez_date}}</td>
+                                        <td><span class="badge badge-danger">RESERVED</span></td>
+                                        <a href="{{route('admin_user_roles',['id' => $dl->id])}}"  target="_blank"  onclick="return !window.open(this.href, '','top=50 left=100 width=800, height=600')"> </a>
+
+                                        <td>
+                                            <a href="{{route('admin_cars_show',['id'=> $dl->id])}}" class="btn btn-sm btn-primary">Detail</a>
+                                        </td>
+                                </tr>
+
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer"></div>
+                    </div>
+                </div>
                 <!-- Area Chart -->
                 <div class="col-xl-8 col-lg-7">
                     <div class="card mb-4">
@@ -194,92 +235,8 @@
                     </div>
                 </div>
                 <!-- Invoice Example -->
-                <div class="col-xl-8 col-lg-7 mb-4">
-                    <div class="card">
-                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary">Invoice</h6>
-                            <a class="m-0 float-right btn btn-danger btn-sm" href="#">View More <i
-                                    class="fas fa-chevron-right"></i></a>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table align-items-center table-flush">
-                                <thead class="thead-light">
-                                <tr>
-                                    <th>Car ID</th>
-                                    <th>Customer</th>
-                                    <th>Item</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    @foreach ($datalist as $dl)
 
 
-                                    <td>{{ $dl->id}}</td>
-                                    <td>{{ $dl->title}}</td>
-{{--                                    <td>{{ $dl->cars->title}}</td>--}}
-                                    <td>{{ $dl->numberplate}}</td>
-                                    <td><span class="badge badge-danger">RESERVED</span></td>
-                                        <a href="{{route('admin_user_roles',['id' => $dl->id])}}"  target="_blank"  onclick="return !window.open(this.href, '','top=50 left=100 width=800, height=600')"> </a>
-
-                                    <td>
-                                        <a href="{{route('admin_cars_show',['id'=> $dl->id])}}" class="btn btn-sm btn-primary">Detail</a>
-                                    </td>
-                                </tr>
-
-                                @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="card-footer"></div>
-                    </div>
-                </div>
-                <!-- Message From Customer-->
-                <div class="col-xl-4 col-lg-5 ">
-                    <div class="card">
-                        <div class="card-header py-4 bg-primary d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-light">Message From Customer</h6>
-                        </div>
-                        <div>
-                            <div class="customer-message align-items-center">
-                                <a class="font-weight-bold" href="#">
-                                    <div class="text-truncate message-title">Hi there! I am wondering if you can help me with a
-                                        problem I've been having.</div>
-                                    <div class="small text-gray-500 message-time font-weight-bold">Udin Cilok · 58m</div>
-                                </a>
-                            </div>
-                            <div class="customer-message align-items-center">
-                                <a href="#">
-                                    <div class="text-truncate message-title">But I must explain to you how all this mistaken idea
-                                    </div>
-                                    <div class="small text-gray-500 message-time">Nana Haminah · 58m</div>
-                                </a>
-                            </div>
-                            <div class="customer-message align-items-center">
-                                <a class="font-weight-bold" href="#">
-                                    <div class="text-truncate message-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                    </div>
-                                    <div class="small text-gray-500 message-time font-weight-bold">Jajang Cincau · 25m</div>
-                                </a>
-                            </div>
-                            <div class="customer-message align-items-center">
-                                <a class="font-weight-bold" href="#">
-                                    <div class="text-truncate message-title">At vero eos et accusamus et iusto odio dignissimos
-                                        ducimus qui blanditiis
-                                    </div>
-                                    <div class="small text-gray-500 message-time font-weight-bold">Udin Wayang · 54m</div>
-                                </a>
-                            </div>
-                            <div class="card-footer text-center">
-                                <a class="m-0 small text-primary card-link" href="#">View More <i
-                                        class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!--Row-->
 
             <div class="row">

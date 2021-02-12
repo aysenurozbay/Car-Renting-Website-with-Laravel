@@ -44,9 +44,8 @@
                                     <li><a  target="_blank" href="{{route('admin_home')}}">Admin Panel</a></li>
                                 @endif
 
-                                <li><a href="{{route('user_reservation')}}">My Reservations</a></li>
-                                <li><a href="#0">...</a></li>
-                                <li><a href="#0">...</a></li>
+                                <li><a href="{{route('user_reservation')}}"> Reservations</a></li>
+                                <li><a href="{{route('myreviews')}}">Reviews</a></li>
                                 <li><a href="{{route('logout')}}">LogOut</a></li>
                             </ul>
 

@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="714899d5-2717-47f4-a9da-57eedbca7a81" name="Default Changelist" comment="Jetsteam Update Profile">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b83d24f2-1c8c-4fe8-a5b3-05d2a12b4d87.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b83d24f2-1c8c-4fe8-a5b3-05d2a12b4d87.xml" afterDir="false" />
+    <list default="true" id="714899d5-2717-47f4-a9da-57eedbca7a81" name="Default Changelist" comment="Review">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/reservations.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/review.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/review_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/user_reviews.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Rewiew.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_24_114633_create_reviews_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_24_114633_create_reviews_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/car_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/car_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_slider.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/rewiew.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_orders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_orders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,14 +161,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/home" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\PHP\car_renting\resources\views\home" />
       <recent name="C:\PHP\car_renting\resources\views\admin" />
+      <recent name="C:\PHP\car_renting\resources\views\home" />
       <recent name="C:\PHP\car_renting\resources\views\layouts" />
     </key>
   </component>
@@ -195,7 +197,7 @@
       <workItem from="1612469519217" duration="1204000" />
       <workItem from="1612629525738" duration="1575000" />
       <workItem from="1612894369894" duration="605000" />
-      <workItem from="1612941168483" duration="19739000" />
+      <workItem from="1612941168483" duration="33792000" />
     </task>
     <task id="LOCAL-00001" summary="Reservation processes">
       <created>1612287944619</created>
@@ -218,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613046683654</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Review">
+      <created>1613062721076</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613062721076</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +248,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reservation processes" />
     <MESSAGE value="Jetsteam Update Profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jetsteam Update Profile" />
+    <MESSAGE value="Review" />
+    <option name="LAST_COMMIT_MESSAGE" value="Review" />
   </component>
 </project>

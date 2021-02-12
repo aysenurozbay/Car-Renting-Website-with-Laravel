@@ -228,57 +228,26 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="testimonial-slider owl-carousel">
+                    @foreach($reviews as $res)
                     <div class="testimonial-item text-center">
                         <div class="testimonial-item--header">
-                            <div class="thumb"><img src="{{asset('assets')}}/assets/images/testimonial/1.jpg" alt="image"></div>
-                            <h3 class="name">martin hook</h3>
-                            <span class="designation">business man</span>
+                            <div class="thumb"><img src="{{Storage::url($res->user->profile_photo_path)}}" alt="image"></div>
+                            <h3 class="name">{{$res->user->name}}</h3>
+                            <span class="designation">{{$res->subject}}</span>
                         </div>
                         <div class="testimonial-item--body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                            <p>{{$res->review}}</p>
                         </div>
-                        <div class="testimonial-item--ratings">
-                            <a href="#0"><i class="fa fa-star"></i></a>
-                            <a href="#0"><i class="fa fa-star"></i></a>
-                            <a href="#0"><i class="fa fa-star"></i></a>
-                            <a href="#0"><i class="fa fa-star"></i></a>
-                            <a href="#0"><i class="fa fa-star-half-o"></i></a>
-                        </div>
+{{--                        <div class="testimonial-item--ratings">--}}
+{{--                            <a href="#0"><i class="fa fa-star"></i></a>--}}
+{{--                            <a href="#0"><i class="fa fa-star"></i></a>--}}
+{{--                            <a href="#0"><i class="fa fa-star"></i></a>--}}
+{{--                            <a href="#0"><i class="fa fa-star"></i></a>--}}
+{{--                            <a href="#0"><i class="fa fa-star-half-o"></i></a>--}}
+{{--                        </div>--}}
                     </div><!-- testimonial-item end -->
-                    <div class="testimonial-item text-center">
-                        <div class="testimonial-item--header">
-                            <div class="thumb"><img src="{{asset('assets')}}/assets/images/testimonial/1.jpg" alt="image"></div>
-                            <h3 class="name">martin hook</h3>
-                            <span class="designation">business man</span>
-                        </div>
-                        <div class="testimonial-item--body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                        </div>
-                        <div class="testimonial-item--ratings">
-                            <a href="#0"><i class="fa fa-star"></i></a>
-                            <a href="#0"><i class="fa fa-star"></i></a>
-                            <a href="#0"><i class="fa fa-star"></i></a>
-                            <a href="#0"><i class="fa fa-star"></i></a>
-                            <a href="#0"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div><!-- testimonial-item end -->
-                    <div class="testimonial-item text-center">
-                        <div class="testimonial-item--header">
-                            <div class="thumb"><img src="{{asset('assets')}}/assets/images/testimonial/1.jpg" alt="image"></div>
-                            <h3 class="name">martin hook</h3>
-                            <span class="designation">business man</span>
-                        </div>
-                        <div class="testimonial-item--body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                        </div>
-                        <div class="testimonial-item--ratings">
-                            <a href="#0"><i class="fa fa-star"></i></a>
-                            <a href="#0"><i class="fa fa-star"></i></a>
-                            <a href="#0"><i class="fa fa-star"></i></a>
-                            <a href="#0"><i class="fa fa-star"></i></a>
-                            <a href="#0"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div><!-- testimonial-item end -->
+
+                    @endforeach
                 </div>
             </div>
         </div>

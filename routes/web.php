@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ReservationController;
+use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\ShopcartController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -62,7 +63,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
 
 
 
-    //  ****** CARS ******
+        //  ****** CARS ******
         Route::prefix('cars')->group(function (){
             Route::get('/' , [App\Http\Controllers\Admin\CarsController::class, 'index'])->name('admin_cars');
             Route::get('create' , [App\Http\Controllers\Admin\CarsController::class, 'create'])->name('admin_cars_add');
@@ -85,6 +86,23 @@ Route::middleware('auth')->prefix('admin')->group(function (){
 
 
         });
+            // ****** REVİEWS******
+            Route::prefix('review')->group(function (){
+                Route::get('/' , [ReviewController::class, 'index'])->name('admin_review');
+                Route::post('update/{id}' , [ReviewController::class, 'update'])->name('admin_review_update');
+                Route::get('delete/{id}' , [ReviewController::class, 'destroy'])->name('admin_review_delete');
+                Route::get('show/{id}', [ReviewController::class, 'show'])->name('admin_review_show');
+
+
+            });
+            // ****** RESERVATİONS******
+            Route::prefix('reservation')->group(function (){
+                Route::get('/' , [ReservationController::class, 'index'])->name('admin_reservation');
+                Route::get('delete/{id}' , [ReservationController::class, 'destroy'])->name('admin_reservation_delete');
+                Route::get('show/{id}', [ReservationController::class, 'show'])->name('admin_reservation_show');
+
+
+            });
 
 
         // Image Gallery
@@ -104,6 +122,8 @@ Route::middleware('auth')->prefix('admin')->group(function (){
 
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
     Route::get('/', [UserController::class, 'index'])->name('myprofile');
+    Route::get('/myreviews', [UserController::class, 'myreviews'])->name('myreviews');
+    Route::get('/destroymyreview/{id}', [UserController::class, 'destroymyreview'])->name('user_review_delete');
 
 });
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){

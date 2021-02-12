@@ -43,12 +43,14 @@ class HomeController extends Controller
         $slider=Cars::select('id','title','description','model','image','gear_type','price', 'slug')-> where('status','True')->limit(4)->get();
         $daily=Cars::select('id','title','description','model','image','gear_type','price', 'slug')-> where('status','True')->limit(3)->inRandomOrder()->get();
         $last=Cars::select('id','title','description','model','image','gear_type','price', 'slug')-> where('status','True')->limit(4)->orderByDesc('id')->get();
-        $pickes=Cars::select('id','title','description','model','image','gear_type','price', 'slug')-> where('status','True')->limit(4)->inRandomOrder('id')->get();
+        $pickes=Cars::select('id','title','description','model','image','gear_type','price', 'slug')-> where('status','True')->limit(4)->inRandomOrder()->get();
+        $reviews= Review::select('id','user_id','subject','review')-> where('status','True')->limit(4)->inRandomOrder()->get();
         $data=[
             'setting' => $setting,
             'slider'=> $slider,
             'daily'=> $daily,
-            'last'=> $last
+            'last'=> $last,
+            'reviews' =>$reviews
         ];
         return view('home.index', $data);
     }
@@ -56,8 +58,8 @@ class HomeController extends Controller
     public function car($id,$slug){
         $data= Cars::find($id);
         $datalist= Image::where('car_id', $id) ->get();
-        $reviews= select('id','user_id','subject','review')-> where('status','True')->limit(4)->orderByDesc('id')->get();
-        return view('home.car_detail',['datalist'=>$datalist,'data'=>$data, 'reviews'=>$reviews]);
+
+        return view('home.car_detail',['datalist'=>$datalist,'data'=>$data]);
     }
 
     public function categorycars($id,$slug){
@@ -70,7 +72,6 @@ class HomeController extends Controller
     }
 
     public function login(){
-
         return view('admin.login');
     }
     public function sendmessage(Request $request){
