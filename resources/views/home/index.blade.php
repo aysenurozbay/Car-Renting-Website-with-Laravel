@@ -23,8 +23,8 @@
                 <div class="col-md-7">
                     <div class="banner-content" style="margin-top:270px; margin-bottom: 190px;">
                         <h1 class="title">find your own car</h1>
-                        <p>Lorem ipsum dolor sit amet, congue placerat nec. Leo faubus sed eleifend bibendum neque vehiculanulla. Lorem ipsum dolor sit amet, congue placerat nec. Leo faubus sed eleifend bibendum neque vehiculanulla.</p>
-                        <a href="#0" class="cmn-btn">see all vehicles</a>
+                        <p>Choise your dream car and make it yours. It is not hard. Anymore..</p>
+                        <a href="#main" class="cmn-btn">see more</a>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -41,7 +41,7 @@
 
 
 <!-- features-section start -->
-<section class="features-section pb-120">
+<section class="features-section pb-120" id="main">
 
     <div class="container">
         <br><br>
@@ -60,27 +60,18 @@
                 <div class="section-header text-center">
                     <br>
                     <br>
-                    <h2 class="section-title">our awsome features</h2>
-                    <p> Augue urna molestie mi adipiscing vulputate pede sedmassa  Praesquam massa, sodales velit turpis in tellu.</p>
-                </div>
+                    <h2 class="section-title">our awesome features</h2>
+
             </div>
         </div>
         <div class="row mb-none-30">
-            <div class="col-lg-4 col-sm-6">
-                <div class="icon-item text-center">
-                    <div class="icon"><i class="fa fa-user"></i></div>
-                    <div class="content">
-                        <h4 class="title">expert drivers</h4>
-                        <p>Tristique ac felis ultr egestelend sed metus eloo dui, et vestulum rutrum nisl tempus </p>
-                    </div>
-                </div>
-            </div><!-- icon-item end -->
+
             <div class="col-lg-4 col-sm-6">
                 <div class="icon-item text-center">
                     <div class="icon"><i class="fa fa-rocket"></i></div>
                     <div class="content">
                         <h4 class="title">fast services</h4>
-                        <p>Tristique ac felis ultr egestelend sed metus eloo dui, et vestulum rutrum nisl tempus </p>
+
                     </div>
                 </div>
             </div><!-- icon-item end -->
@@ -89,11 +80,12 @@
                     <div class="icon"><i class="fa fa-volume-control-phone"></i></div>
                     <div class="content">
                         <h4 class="title">customer support</h4>
-                        <p>Tristique ac felis ultr egestelend sed metus eloo dui, et vestulum rutrum nisl tempus </p>
+
                     </div>
                 </div>
             </div><!-- icon-item end -->
         </div>
+    </div>
     </div>
 </section>
 <!-- features-section end -->
@@ -107,8 +99,7 @@
                 <div class="block-area">
                     <div class="block-header">
                         <h2 class="title">Well Come to Renten For Rent </h2>
-                        <p>Lorem ipsum dolor sit amet, sit lectus risus dis aptent, vitae odio nec. Justo volutpat rutrum purus, augue cursus, turpis felis nonummy nisl. Vel justrus sed volutpat, tristique tempor scelerisque dictum dui donec urna, consequat scelerisque eu ut, ornare ut. Rutrum eget</p>
-                    </div>
+                        </div>
                     <div class="block-body">
                         <ul class="num-list">
                             <li><span class="num">01</span>Download Car rent app</li>
@@ -129,8 +120,8 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section-header text-center">
-                    <h2 class="section-title">choose awsome rental car</h2>
-                    <p> Augue urna molestie mi adipiscing vulputate pede sedmassa  Praesquam massa, sodales velit turpis in tellu.</p>
+                    <h2 class="section-title">choose awesome rental car</h2>
+
                 </div>
             </div>
         </div>
@@ -148,30 +139,11 @@
                 <div class="block-area">
                     <div class="block-header">
                         <h2 class="title">We provided all Kind of Rental Services</h2>
-                        <p>Feugiat tortor mauris, vitae magna parturient nec, velit bibensectetuer eros urna nunc suspendisse. Elit odio lobortis adipiscing tristiqucursus eu, hendrerit nulla voluptatem wisi Lorem ipsum dolor sit amet, velum magna, fusce ut dolor sit sed et habitant. Sociis tincidunt velit. Collis dictum fames mauris magna, nulla nunc amet, in magna. Amet nmmy eget et, orci nunc nam, condimentum donec tortor et magna </p>
+                        <p>Nippon Rent-A-Car Service offers rental deals at large airports like Norman Y. Mineta San Jose International Airport, Southwest Florida International Airport, Detroit Wayne County International, McCarran International Airport in Las Vegas and more! Cheap auto rental prices can also be found at smaller airport locations like Charleston International Airport and Portland International Jetport Airport as well.
+
+                            You can also search major cities like New York City, Los Angeles and Chicago for the best value on rental vehicles. Quickly see results from the top car and auto rental companies at thousands of city and airport locations around the world. Find your perfect vehicle today and save money with Autorentals. Need to find a rental near you? You can also search by zip code. </p>
                     </div>
-                    <div class="block-body">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 col-4">
-                                <div class="counter-item">
-                                    <span class="title">total car</span>
-                                    <span>3497</span>
-                                </div>
-                            </div><!-- counter-item end -->
-                            <div class="col-md-4 col-sm-4 col-4">
-                                <div class="counter-item">
-                                    <span class="title">car rent</span>
-                                    <span>4574</span>
-                                </div>
-                            </div><!-- counter-item end -->
-                            <div class="col-md-4 col-sm-4 col-4">
-                                <div class="counter-item">
-                                    <span class="title">experience</span>
-                                    <span>25</span><span class="counter-text">Y</span>
-                                </div>
-                            </div><!-- counter-item end -->
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="col-lg-6">
@@ -192,7 +164,7 @@
             <div class="col-lg-6">
                 <div class="section-header text-center">
                     <h2 class="section-title">Today's Choice</h2>
-                    <p> Augue urna molestie mi adipiscing vulputate pede sedmassa  Praesquam massa, sodales velit turpis in tellu.</p>
+
                 </div>
             </div>
         </div>

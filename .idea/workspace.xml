@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="714899d5-2717-47f4-a9da-57eedbca7a81" name="Default Changelist" comment="Review">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/reservations.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/review.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/review_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/user_reviews.blade.php" afterDir="false" />
+    <list default="true" id="714899d5-2717-47f4-a9da-57eedbca7a81" name="Default Changelist" comment="Review Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_slider.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/reservations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reservations.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/car_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/car_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/category_cars.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/category_cars.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/user_orders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_orders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +192,7 @@
       <workItem from="1612469519217" duration="1204000" />
       <workItem from="1612629525738" duration="1575000" />
       <workItem from="1612894369894" duration="605000" />
-      <workItem from="1612941168483" duration="33792000" />
+      <workItem from="1612941168483" duration="44215000" />
     </task>
     <task id="LOCAL-00001" summary="Reservation processes">
       <created>1612287944619</created>
@@ -227,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613062721076</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Review Done">
+      <created>1613115094056</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613115094056</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +251,7 @@
     <MESSAGE value="Reservation processes" />
     <MESSAGE value="Jetsteam Update Profile" />
     <MESSAGE value="Review" />
-    <option name="LAST_COMMIT_MESSAGE" value="Review" />
+    <MESSAGE value="Review Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Review Done" />
   </component>
 </project>

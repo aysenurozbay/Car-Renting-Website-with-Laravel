@@ -37,13 +37,13 @@
                                     <img src="{{Storage::url($dl->car->image)}}">
                                     <ul class="post-meta d-flex">
                                         <li><a href="#0">{{$dl->created_at}}</a></li>
-                                        {{--                            <li><a href="#0">03 Comments</a></li>--}}
+                                                                    <li><a href="#0">03 Comments</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="content">
 
-                                    <h5 class="post-title" style="text-transform: capitalize"><span style="color: red"> </span> {{$dl->car->title}} </h5>
+{{--                                    <h5 class="post-title" style="text-transform: capitalize"><span style="color: red"> </span> {{$dl->car->title}} </h5>--}}
 
                                     <p class="post-title"><span style="color: red"> Start: </span> {{$dl->rez_date}} - {{$dl->rez_time}} </p>
                                     <p class="post-title"><span style="color: red"> End: </span>{{$dl->return_date}} - {{$dl->return_time}} </p>

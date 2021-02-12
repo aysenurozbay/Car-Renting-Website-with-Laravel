@@ -36,16 +36,11 @@
                     <div class="table-responsive p-3">
                         <div id="dataTableHover_wrapper" class="dataTables_wrapper dt-bootstrap4">
                             <div class="row"><div class="col-sm-12 col-md-6">
-                                    <div class="dataTables_length" id="dataTableHover_length">
-                                        <label>Show
-                                            <select name="dataTableHover_length" aria-controls="dataTableHover" class="custom-select custom-select-sm form-control form-control-sm">
-                                                <option value="10">10</option><option value="25">25</option>
-                                                <option value="50">50</option><option value="100">100</option>
-                                            </select> entries</label>
-                                    </div>
+
                                 </div>
-                                <div class="col-sm-12 col-md-6"><div id="dataTableHover_filter" class="dataTables_filter"><label>Search:
-                                            <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="dataTableHover"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table align-items-center table-flush table-hover dataTable" id="dataTableHover" role="grid" aria-describedby="dataTableHover_info">
+                                <div class="col-sm-12 col-md-6">
+
+                                </div></div><div class="row"><div class="col-sm-12"><table class="table align-items-center table-flush table-hover dataTable" id="dataTableHover" role="grid" aria-describedby="dataTableHover_info">
                                         <thead class="thead-light">
 
                                         <tr>

@@ -68,7 +68,9 @@ class HomeController extends Controller
                                 ['category_id',$id],
                                 ])->get();
         $data= Category::find($id);
-        return view('home.category_cars', ['datalist'=>$datalist,'data'=>$data]);
+        $reviews= Review::select('id','user_id','subject','review')-> where('status','True')->limit(4)->inRandomOrder()->get();
+
+        return view('home.category_cars', ['datalist'=>$datalist,'data'=>$data,'reviews'=>$reviews]);
     }
 
     public function login(){

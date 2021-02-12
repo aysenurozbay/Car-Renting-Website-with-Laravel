@@ -6,11 +6,11 @@
     <!-- Container Fluid-->
     <div class="container-fluid" id="container-wrapper">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Review</h1>
+            <h1 class="h3 mb-0 text-gray-800">Reservation</h1>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./">Home</a></li>
                 <li class="breadcrumb-item">Pages</li>
-                <li class="breadcrumb-item active" aria-current="page">Review List</li>
+                <li class="breadcrumb-item active" aria-current="page">Reservation List</li>
             </ol>
         </div>
 
@@ -20,7 +20,7 @@
             <div class="col-lg-12">
                 <div class="card mb-4">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Review List</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Reservation List</h6>
                     </div>
                     <div class="table-responsive p-3">
                         <div id="dataTableHover_wrapper" class="dataTables_wrapper dt-bootstrap4">
@@ -44,9 +44,9 @@
                                         <tfoot>
                                         <tr>
                                             <th rowspan="1" colspan="1">Id</th>
-                                            <th rowspan="1" colspan="1">Name </th>
-                                            <th rowspan="1" colspan="1">Subject</th>
-                                            <th rowspan="1" colspan="1">Review</th>
+                                            <th rowspan="1" colspan="1">User Name </th>
+                                            <th rowspan="1" colspan="1">Car</th>
+                                            <th rowspan="1" colspan="1">Number Plate</th>
                                             <th rowspan="1" colspan="1">Date</th>
                                             <th rowspan="1" colspan="1">Status</th>
                                             <th rowspan="1" colspan="3">Actions</th>
@@ -56,20 +56,17 @@
 
                                         <tbody>
 
-                                        @foreach ($reservations as $dl)
+                                        @foreach ($datalist as $dl)
                                             <p></p>
                                             <tr>
                                                 <td>{{ $dl->id}}</td>
                                                 <td>{{ $dl->user->name }}</td>
-                                                <td>{{ $dl->subject }}</td>
-                                                <td>{{ $dl->review }}</td>
-                                                <td>{{ $dl->created_at }}</td>
+                                                <td>{{ $dl->car->title }} </td>
+                                                <td>{{ $dl->car->numberplate}}</td>
+                                                <td>{{ $dl->rez_date }}- {{ $dl->return_date }}</td>
 
-                                                <td>{{ $dl->status }}</td>
-
-
-                                                <td><a target="_blank" href="{{route('admin_review_show', ['id' => $dl->id])}}"> <i class="fas fa-edit"> </i></a></td>
-                                                <td><a href="{{route('admin_review_delete', ['id' => $dl->id])}}" onclick="return confirm('You are deleting this. Are you sure?' )"> <i class="fas fa-trash-alt"></i></a></td>
+                                                <td><a target="_blank" href="{{route('admin_reservation_show', ['id' => $dl->id])}}"> <i class="fas fa-edit"> </i></a></td>
+                                                <td><a href="{{route('admin_reservation_delete', ['id' => $dl->id, 'car_id'=> $dl->car->id ])}}" onclick="return confirm('You are deleting this. Are you sure?' )"> <i class="fas fa-trash-alt"></i></a></td>
                                             </tr>
 
                                         @endforeach

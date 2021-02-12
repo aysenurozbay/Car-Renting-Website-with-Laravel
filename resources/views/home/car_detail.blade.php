@@ -41,7 +41,7 @@
             <h3 class="car-name" style="color: red;">{{$data->title}}</h3>
             <br>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-7">
                     <div class="reservation-details-area">
                         <div class="thumb">
                             <img src="{{Storage::url($data->image)}}" alt="images">

@@ -64,9 +64,10 @@
     <li class="nav-item">
         <a class="nav-link" href="{{route('admin_reservation')}}">
             <i class="fas fa-user-check"></i>
-            <span>Reviews</span>
+            <span>Reservations</span>
         </a>
     </li>
+
 
 
     <hr class="sidebar-divider">
